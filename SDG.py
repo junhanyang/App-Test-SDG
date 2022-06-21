@@ -73,8 +73,9 @@ if len(Portfolios)>0 and len(SDG_Chosen)>0:
     if total_amt > 0:
         amt_filled = True
 
-#collect info on priorities
+
 if amt_filled:
+    #collect info on priorities
     st.write('Please check the box if an SDG value is super important to you')
     cols = st.columns(max(1,len(SDG_Chosen)))
     priorities = {}
@@ -110,7 +111,7 @@ if amt_filled:
     for row in sdg_perc.iterrows():
         cols = st.columns(16)
         cur_row = row[1]
-        cols[4].image(Image.open(images[cur_row['SDG']]).resize((300,300)),width=45,use_column_width='never')
+        cols[4].image(Image.open(images[cur_row['SDG']]).resize((100,100)),width=45,use_column_width='never')
         n_square = int(cur_row['Aligned']*100//20)
         #cols[1].image(Image.open(f'/Ratings/{n_square}.png').resize((300,200)),width=100)
         for i in range(n_square):
