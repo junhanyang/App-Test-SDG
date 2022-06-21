@@ -53,7 +53,7 @@ SDG = ['SDG 01 - No Poverty','SDG 02 - Zero Hunger','SDG 03 - Good Health and We
 'SDG 11 - Sustainable Cities and Communities','SDG 12 - Responsible Consumption and Production',
 'SDG 13 - Climate Action', 'SDG 14 - Life Below Water', 'SDG 15 - Life on Land', 
 'SDG 16 - Peace, Justice and Strong Insttitutions', 'SDG 17 - Partnerships for the Goals']
-images = [f'/SDG Icons/SDG0{x}.png' for x in range(1,10)]
+images = [f'SDG Icons/SDG0{x}.png' for x in range(1,10)]
 images.extend([f'SDG Icons/SDG{x}.png' for x in range(10,18)])
 images=dict(zip(SDG,images))
 
