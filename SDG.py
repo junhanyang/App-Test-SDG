@@ -133,11 +133,11 @@ if amt_filled:
 
     col = st.columns(3)[1]
     if weighted_perc > 2/3:
-        col.image(Image.open('/Ratings/a.png'),use_column_width = True)
+        col.image(Image.open('Ratings/a.png'),use_column_width = True)
     elif weighted_perc > 1/3:
-        col.image(Image.open('/Ratings/b.png'),use_column_width = True)
+        col.image(Image.open('Ratings/b.png'),use_column_width = True)
     else:
-        col.image(Image.open('/Ratings/c.png'),use_column_width = True)
+        col.image(Image.open('Ratings/c.png'),use_column_width = True)
 
     st.write('')
     st.write('')
