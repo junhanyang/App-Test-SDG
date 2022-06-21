@@ -112,7 +112,7 @@ if amt_filled:
         cur_row = row[1]
         cols[4].image(Image.open(images[cur_row['SDG']]).resize((300,300)),width=45,use_column_width='never')
         n_square = int(cur_row['Aligned']*100//20)
-        #cols[1].image(Image.open(f'/Users/junhanyang/Desktop/Star Ratings/{n_square}.png').resize((300,200)),width=100)
+        #cols[1].image(Image.open(f'/Ratings/{n_square}.png').resize((300,200)),width=100)
         for i in range(n_square):
             cols[6+i].markdown('🟢')
         for i in range(n_square,5):
@@ -133,11 +133,11 @@ if amt_filled:
 
     col = st.columns(3)[1]
     if weighted_perc > 2/3:
-        col.image(Image.open('/Users/junhanyang/Desktop/Ratings/a.png'),use_column_width = True)
+        col.image(Image.open('/Ratings/a.png'),use_column_width = True)
     elif weighted_perc > 1/3:
-        col.image(Image.open('/Users/junhanyang/Desktop/Ratings/b.png'),use_column_width = True)
+        col.image(Image.open('/Ratings/b.png'),use_column_width = True)
     else:
-        col.image(Image.open('/Users/junhanyang/Desktop/Ratings/c.png'),use_column_width = True)
+        col.image(Image.open('/Ratings/c.png'),use_column_width = True)
 
     st.write('')
     st.write('')
