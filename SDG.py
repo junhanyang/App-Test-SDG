@@ -111,8 +111,8 @@ if amt_filled:
         cols = st.columns(16)
         cur_row = row[1]
         cols[4].image(Image.open(images[cur_row['SDG']]).resize((100,100)),width=45,use_column_width='never')
-        n_square = int(cur_row['Aligned']*100//20)
-        #cols[1].image(Image.open(f'/Ratings/{n_square}.png').resize((300,200)),width=100)
+        
+        n_square = int(math.ceil(cur_row['Aligned']*10)*10//20)
         for i in range(n_square):
             cols[6+i].markdown('🟢')
         for i in range(n_square,5):
